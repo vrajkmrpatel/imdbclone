@@ -1,15 +1,25 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
+import Header from './components/Header'
+import Home from './pages/Home'
+import MovieList from './components/MovieList'
+import Movie from './pages/movieDetail/Movie'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <h1 className='bg-green-500 p-4 font-bold text-2xl'>IMDB CLONE</h1>
-    </>
+    <div>
+      <Router>
+      <Header />
+        <Routes>
+          <Route index element={<Home />}></Route>
+          <Route path='movie/:id' element={<Movie/>}></Route>
+          <Route path='movies/:type' element={<MovieList/>}></Route>
+          <Route path='/*' element={<h1>Error page</h1>}></Route>
+        </Routes>
+      </Router>
+    </div>
   )
 }
 
