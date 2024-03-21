@@ -5,6 +5,7 @@ import Header from './components/Header'
 import Home from './pages/Home'
 import MovieList from './components/MovieList'
 import Movie from './pages/movieDetail/Movie'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path='movies/:type' element={<MovieList/>}></Route>
           <Route path='/*' element={<h1>Error page</h1>}></Route>
         </Routes>
+        <Footer />
       </Router>
     </div>
   )
