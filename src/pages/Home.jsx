@@ -28,7 +28,7 @@ const Home = () => {
                     {
                         popularMovies.map(movie => (
                             <Link style={{ textDecoration: "none", color: "white" }} to={`/movie/${movie.id}`} >
-                                <div className="h-[600px]">
+                                <div className="md:h-[600px]">
                                     <img className='w-full block m-auto' src={`https://image.tmdb.org/t/p/original${movie && movie.backdrop_path}`} />
                                 </div>
                                 <div
@@ -38,7 +38,7 @@ const Home = () => {
                                         {movie ? movie.release_date : ""}
                                         <span className=" ml-12">
                                             {movie ? movie.vote_average : ""}
-                                            <i className="fas fa-star" />{" "}
+                                            <i className="fas fa-star text-yellow-400 ml-2" />{" "}
                                         </span>
                                     </div>
                                     <div className=" italic text-[1rem] flex text-left mb-1 w-1/2">{movie ? movie.overview : ""}</div>

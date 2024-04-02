@@ -1,0 +1,21 @@
+.cast-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .cast-item {
+    flex: 0 0 calc(25% - 20px); /* Four items per row with some spacing */
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .cast-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* To make the image circular */
+  }
+  
+  .cast-item p {
+    margin-top: 5px;
+  }
+  

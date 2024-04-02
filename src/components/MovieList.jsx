@@ -26,7 +26,7 @@ const MovieList = () => {
             <div className="flex flex-wrap justify-center">
                 {
                     movieList.map(movie => (
-                        <Card movie={movie} />
+                        <Card key={movie.id} movie={movie} />
                     ))
                 }
             </div>
